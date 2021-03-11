@@ -1,0 +1,46 @@
+/* .test {
+  transform: rotate(30deg);
+} */
+
+/*Серая полоса*/
+#path {
+    stroke-dasharray: 1256;
+    stroke-dashoffset: 1256;
+    animation: dash 1s linear forwards;
+  }
+  
+  #path1 {
+    stroke-dasharray: 1256;
+    stroke-dashoffset: 1256;
+    animation: dash1 2s linear forwards;
+  }
+  
+  #path2 {
+    stroke-dasharray: 1256;
+    stroke-dashoffset: 1256;
+    animation: dash2 2.5s linear forwards;
+  }
+  
+  /*Создаем разрыв в круге*/
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 150; /*для флага посередине*/
+    }
+  }
+  
+  @keyframes dash1 {
+    to {
+      stroke-dashoffset: 825; 
+    }
+  }
+  
+  @keyframes dash2 {
+    to {
+      stroke-dashoffset: 471; 
+    }
+  }
+  
+  /* The only thing that needs to change to make it "grow" is the first value of stroke-dasharray which should be x * circumference. Here, circumference is about 1256 (2 * radius=200 * pi) 
+  
+  Единственное, что нужно изменить, чтобы он «вырос», - это первое значение stroke-dasharray, которое должно быть x * окружность. Здесь длина окружности составляет около 1256 (2 * радиус = 200 * пи)
+  */

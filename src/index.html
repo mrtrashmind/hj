@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="chart">
+        <div class="chart__wrapper">
+            <div class="chart__svg">
+                <div class="chart__img">
+                    <img src="/icons/loyalti.svg" alt="">
+                </div>
+                <svg class="test" width="500" height="500">
+                    <defs>
+                        <linearGradient id="linear" x1="0%" y1="0%">
+                        <stop offset="0%"   stop-color="grey"/>
+                        <stop offset="100%" stop-color="grey"/>
+                        </linearGradient>
+                        <linearGradient id="linear1" x1="0%" y1="0%">
+                        <stop offset="0%"   stop-color="yellow"/>
+                        <stop offset="100%" stop-color="yellow"/>
+                        </linearGradient>
+                        <linearGradient id="linear2" x1="0%" y1="0%">
+                        <stop offset="0%"   stop-color="green"/>
+                        <stop offset="100%" stop-color="green"/>
+                        </linearGradient>
+                    </defs>
+                    <circle id="path" cx="250" cy="250" r="200" stroke="url(#linear)" stroke-linecap="round" stroke-width="15" fill="transparent" transform="rotate(290 250,250)"/>
+                    <circle id="path2" cx="250" cy="250" r="200" stroke="url(#linear2)" stroke-linecap="round" stroke-width="17" fill="transparent" transform="rotate(290 250,250)"/> 
+                    <circle id="path1" cx="250" cy="250" r="200" stroke="url(#linear1)" stroke-linecap="round" stroke-width="19" fill="transparent" transform="rotate(290 250,250)"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
