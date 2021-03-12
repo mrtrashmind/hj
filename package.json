@@ -1,5 +1,5 @@
 {
-  "name": "yoga",
+  "name": "hj",
   "version": "1.0.0",
   "description": "Portfolio",
   "main": "gulpfile.js",
@@ -30,10 +30,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mrtrashmind/yoga.git"
+    "url": "git+https://github.com/mrtrashmind/hj.git"
   },
   "bugs": {
-    "url": "https://github.com/mrtrashmind/yoga/issues"
+    "url": "https://github.com/mrtrashmind/hj/issues"
   },
-  "homepage": "https://github.com/mrtrashmind/yoga#readme"
+  "homepage": "https://github.com/mrtrashmind/hj#readme"
 }

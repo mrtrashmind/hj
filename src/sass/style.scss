@@ -1,46 +1,113 @@
-/* .test {
-  transform: rotate(30deg);
-} */
+:root {
+    --yellow: #fcd329;
+    --green: #70a84b;
+    --grey: #ececec;
+}
 
-/*Серая полоса*/
-#path {
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('/fonts/GothamPro.eot');
+    src: url('/fonts/GothamPro.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/GothamPro.woff') format('woff'),
+    url('/fonts/GothamPro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    font-family: Arial, sans-serif;
+}
+
+.chart {
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    &__svg {
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+
+        max-width: 500px;
+    }
+    &__info {
+        position: absolute;
+
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__text {
+        text-align: center;
+        &-percent {
+            position: relative;
+
+            margin-top: 30px;
+
+            font-family: 'Gotham Pro';
+            font-size: 84px;
+            span {
+                font-family: 'Gotham Pro';
+                font-size: 36px;
+            }
+            &::after {
+                content: '%';
+                position: absolute;
+                top: 0px;
+                right: 58px;
+
+                font-family: 'Gotham Pro';
+                font-size: 20px;
+
+                color: #555555;
+            }
+        }
+    }
+}
+
+// Анимация кругов
+#grey {
     stroke-dasharray: 1256;
     stroke-dashoffset: 1256;
     animation: dash 1s linear forwards;
-  }
-  
-  #path1 {
+}
+
+#yellow {
     stroke-dasharray: 1256;
     stroke-dashoffset: 1256;
     animation: dash1 2s linear forwards;
-  }
-  
-  #path2 {
+}
+
+#green {
     stroke-dasharray: 1256;
     stroke-dashoffset: 1256;
     animation: dash2 2.5s linear forwards;
-  }
-  
-  /*Создаем разрыв в круге*/
-  @keyframes dash {
+}
+
+/*Создаем разрыв в круге*/
+@keyframes dash {
     to {
-      stroke-dashoffset: 150; /*для флага посередине*/
+        stroke-dashoffset: 150; //Сдвиг
     }
-  }
-  
-  @keyframes dash1 {
+}
+
+@keyframes dash1 {
     to {
-      stroke-dashoffset: 825; 
+        stroke-dashoffset: 825;
     }
-  }
-  
-  @keyframes dash2 {
+}
+
+@keyframes dash2 {
     to {
-      stroke-dashoffset: 471; 
+        stroke-dashoffset: 471;
     }
-  }
+}
   
-  /* The only thing that needs to change to make it "grow" is the first value of stroke-dasharray which should be x * circumference. Here, circumference is about 1256 (2 * radius=200 * pi) 
-  
-  Единственное, что нужно изменить, чтобы он «вырос», - это первое значение stroke-dasharray, которое должно быть x * окружность. Здесь длина окружности составляет около 1256 (2 * радиус = 200 * пи)
-  */
+/* The only thing that needs to change to make it "grow" is the first value of stroke-dasharray which should be x * circumference. Here, circumference is about 1256 (2 * radius=200 * pi) 
+
+Единственное, что нужно изменить, чтобы он «вырос», - это первое значение stroke-dasharray, которое должно быть x * окружность. Здесь длина окружности составляет около 1256 (2 * радиус = 200 * пи)
+*/
+
