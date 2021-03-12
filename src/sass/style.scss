@@ -6,10 +6,10 @@
 
 @font-face {
     font-family: 'Gotham Pro';
-    src: url('/fonts/GothamPro.eot');
-    src: url('/fonts/GothamPro.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/GothamPro.woff') format('woff'),
-    url('/fonts/GothamPro.ttf') format('truetype');
+    src: url('../fonts/GothamPro.eot');
+    src: url('../fonts/GothamPro.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GothamPro.woff') format('woff'),
+    url('../fonts/GothamPro.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -146,6 +146,9 @@
 
             background: grey;
         }
+        &-wrapper {
+            display: flex;
+        }
         &-item {
             display: flex;
             justify-content: space-between;
@@ -176,6 +179,8 @@
             flex-direction: column;
             align-items: flex-end;
             justify-content: space-between;
+
+            margin-right: 30px;
 
             font-size: 20px;
             line-height: 1;
