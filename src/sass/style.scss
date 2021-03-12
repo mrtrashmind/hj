@@ -20,9 +20,10 @@
 }
 
 .chart {
+    display: flex;
+    justify-content: center;    
     &__wrapper {
-        display: flex;
-        justify-content: center;
+        width: 500px;
     }
     &__svg {
         position: relative;
@@ -32,6 +33,20 @@
 
         max-width: 500px;
     }
+    &__line {
+        position: absolute;
+        left: 0;
+        top: 50%;
+
+        width: 34px;
+        height: 386px;
+
+        border-top: 1px solid grey;
+        border-bottom: 1px solid grey;
+        border-left: 1px solid grey;
+        border-radius: 10px 0 0 10px;
+
+    }
     &__info {
         position: absolute;
 
@@ -40,33 +55,193 @@
         justify-content: center;
         align-items: center;
     }
+
     &__text {
         text-align: center;
         &-percent {
-            position: relative;
-
             margin-top: 30px;
 
             font-family: 'Gotham Pro';
             font-size: 84px;
+            line-height: 1;
             span {
+                display: inline-flex;
+                flex-flow: column-reverse;
+                justify-content: center;
+
                 font-family: 'Gotham Pro';
-                font-size: 36px;
+                font-size: 54px;
+                &::after {
+                    content: '%';
+                    margin-bottom: -7px;
+                    align-self: center;
+                    font-family: 'Gotham Pro';
+                    font-size: 29px;
+                    line-height: 1;
+    
+                    color: #555555;
+                }
             }
+        }
+        &-loyal {
+            font-size: 43px;
+            line-height: 1;
+            span {
+                font-size: 36px;
+                line-height: 1;
+
+                color: var(--yellow);
+            }
+        }
+        &-descr {
+            margin-top: 5px;
+
+            font-size: 18px;
+            color: grey;
+        }
+        &-number {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 20px;
+
+            font-size: 29px;
+            line-height: 1;
+
+            color: var(--green);
             &::after {
-                content: '%';
+                content: '';
+                top: 0px; 
+
+                height: 0px; 
+                width: 0px;
+
+                margin-right: 10px;
+                padding: 0px;
+
+                border-radius: 0px; 
+
+                transform: rotate(0deg); 
+                border-top: 0px transparent; 
+                border-left: 13px solid transparent; 
+                border-right: 13px solid transparent; 
+                border-bottom: 13px solid var(--green); 
+            }
+        }
+    }
+    &__category {
+        position: relative;
+
+        padding: 0 50px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 0;
+
+            width: 20px;
+            height: 2px;
+
+            background: grey;
+        }
+        &-item {
+            display: flex;
+            justify-content: space-between;
+
+            margin-top: 30px;
+            &:nth-child(2) {
+                position: relative;
+                &::before {
+                    content: '\002B';
+                    position: absolute;
+                    top: -21px;
+                    left: -58px;
+
+                    font-size: 30px;
+                    
+                    background: #ffffff;
+
+                    color: grey;
+                }
+            }
+        }
+        &-name {
+            font-size: 20px;
+            line-height: 1;
+        }
+        &-percent {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-between;
+
+            font-size: 20px;
+            line-height: 1;
+        }
+        &-people {
+            margin-top: 5px;
+
+            display: flex;
+            span {
+                margin-right: 3px;
+
+                font-size: 18px;
+                line-height: 1;
+    
+                color: grey;
+            }
+        }
+        &-line {
+            position: relative;
+
+            width: 150px;
+            height: 45px;
+
+            background: var(--grey);
+
+            border: 1px solid rgb(185, 185, 185);
+            border-radius: 10px;
+
+            overflow: hidden;
+            .lineup {
+                width: 0;
+                height: 75%;
+
+                transition: 2s all;
+            }
+            .linedown {
+                width: 30%;
+                height: 25%;
+
+                opacity: 0.4;
+            }
+            .green {
+                background: var(--green);
+            }
+            .yellow {
+                background: var(--yellow);
+            }
+            .red {
+                background: red;
+            }
+            .total {
                 position: absolute;
-                top: 0px;
-                right: 58px;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 5%;
 
-                font-family: 'Gotham Pro';
-                font-size: 20px;
-
-                color: #555555;
+                font-size: 18px;
+                line-height: 1;
+    
+                color: grey;
             }
         }
     }
 }
+
+
 
 // Анимация кругов
 #grey {
